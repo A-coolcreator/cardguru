@@ -1,0 +1,470 @@
+# CardGuru - Comprehensive .gitignore
+# Generated for Node.js + React + TypeScript + PostgreSQL project
+
+# ========================
+# DEPENDENCIES & PACKAGES
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package lock files (choose one based on your package manager)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ========================
+# ENVIRONMENT & CONFIG
+# ========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Environment variables
+*.env
+.envrc
+
+# ========================
+# BUILD OUTPUT & DIST
+# ========================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+
+# Frontend build artifacts
+frontend/dist/
+frontend/build/
+frontend/out/
+
+# Backend build artifacts
+src/**/*.js
+src/**/*.js.map
+lib/
+coverage/
+
+# ========================
+# LOGS & DEBUGGING
+# ========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output/
+.coverage/
+
+# ========================
+# DATABASE & DATA
+# ========================
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Database dumps
+*.sql
+dump.rdb
+
+# PostgreSQL
+*.pgsql
+pg_log/
+
+# Prisma (if using)
+prisma/migrations/
+.env.database
+
+# ========================
+# CACHE & TEMPORARY FILES
+# ========================
+# Dependency directories
+.npm/
+.pnp/
+.pnp.js
+
+# Yarn cache
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# npm cache
+.npm/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# ========================
+# EDITOR & IDE FILES
+# ========================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+.ionide/
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ========================
+# OPERATING SYSTEM FILES
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ========================
+# TESTING & CI/CD
+# ========================
+# Jest
+coverage/
+.jest/
+
+# Testing artifacts
+test-results/
+test-reports/
+screenshots/
+videos/
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ========================
+# DOCKER & CONTAINERIZATION
+# ========================
+# Docker
+.dockerignore
+Dockerfile.dev
+docker-compose.override.yml
+.docker/
+
+# ========================
+# FRONTEND SPECIFIC
+# ========================
+# Vite
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# Webpack
+.webpack/
+
+# Rollup
+.rollup.cache/
+
+# SvelteKit
+.svelte-kit/
+
+# Static files
+public/uploads/
+public/temp/
+
+# ========================
+# BACKEND SPECIFIC
+# ========================
+# API keys and secrets
+config/keys.js
+config/prod.js
+
+# Upload directories
+uploads/
+temp/
+tmp/
+
+# Session files
+sessions/
+
+# ========================
+# AI & ML FILES
+# ========================
+# Model files
+*.pkl
+*.model
+*.h5
+*.pb
+models/
+checkpoints/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Python (if any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ========================
+# DOCUMENTATION & ASSETS
+# ========================
+# Generated documentation
+docs/build/
+docs/.vuepress/dist/
+
+# Large media files (optional - uncomment if needed)
+# *.mp4
+# *.mov
+# *.avi
+# *.wmv
+# *.flv
+# *.webm
+# *.mkv
+# *.m4v
+# *.3gp
+
+# ========================
+# SECURITY & SENSITIVE DATA
+# ========================
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# API keys
+.api-keys
+secrets.json
+credentials.json
+
+# JWT secrets
+jwt-secret.txt
+
+# ========================
+# DEPLOYMENT & CLOUD
+# ========================
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Railway
+.railway/
+
+# Heroku
+.heroku/
+
+# AWS
+.aws/
+.elasticbeanstalk/
+
+# Google Cloud
+.gcloud/
+.google-cloud/
+
+# ========================
+# BACKUP & ARCHIVE FILES
+# ========================
+*.backup
+*.bak
+*.tmp
+*.temp
+*.old
+*.orig
+*.rej
+*.patch
+
+# Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ========================
+# PROJECT SPECIFIC
+# ========================
+# CardGuru specific ignores
+/seeds/backup/
+/migrations/backup/
+test.html
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Generated embeddings cache
+embeddings-cache/
+vector-cache/
+
+# Sample data (if sensitive)
+# sample-data/
+# test-data/
+
+# ========================
+# MONITORING & ANALYTICS
+# ========================
+# Error tracking
+.sentry/
+.bugsnag/
+
+# Performance monitoring
+.newrelic/
+.datadog/
+
+# Analytics
+.amplitude/
+.mixpanel/
+
+# ========================
+# LEGAL & COMPLIANCE
+# ========================
+# License files (keep main LICENSE)
+!LICENSE
+!LICENSE.md
+!LICENSE.txt
+
+# Security scan results
+.snyk
+.security/
+security-report.json
+
+# ========================
+# DEVELOPMENT TOOLS
+# ========================
+# Storybook
+.storybook/build/
+storybook-static/
+
+# Chromatic
+.chromatic/
+
+# Bundle analyzer
+bundle-analyzer-report.html
+.bundle-analyzer/
+
+# Lighthouse reports
+lighthouse-report.html
+.lighthouse/
+
+# ========================
+# END OF .GITIGNORE
+# ========================
+
+# Note: To force include a file that would otherwise be ignored,
+# use the negation pattern: !filename
+# Example: !important-config.env

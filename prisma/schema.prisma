@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CreditCard {
+  id                   String   @id @default(cuid())
+  name                 String
+  issuer               Issuer
+  network              Network
+  tier                 Tier
+  annualFee            Int
+  feeWaiverThreshold   Int?
+  feeWaiver            Boolean  @default(false)
+  rewardsRates         Json
+
+  // Flattened Surcharge fields
+  fuelSurchargePercentage Int?
+  fuelSurchargeMaxCap     Int?
+
+  // Flattened Lounge fields
+  loungeDomesticVisits      Int?
+  loungeInternationalVisits Int?
+  loungeMinSpendPerQuarter  Int?
+
+  welcomeOffer         String?
+
+  // Flattened Eligibility fields
+  eligibilityMinMonthlyIncome Int
+  eligibilityMinCreditScore   Int
+  eligibilityNri              Boolean
+
+  additionalPerks      String[]
+  tags                 String[]
+  description          String
+
+  embedding            Float[] // Remove @db.Vector, pgvector handled separately
+  applyLink            String
+  logoUrl              String?
+
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@index([tags], type: Gin)
+}
+
+enum Issuer {
+  HDFC
+  AXIS
+  ICICI
+  SBI
+  KOTAK
+  OTHER
+}
+
+enum Network {
+  VISA
+  MASTERCARD
+  RUPAY
+}
+
+enum Tier {
+  ENTRY
+  MID
+  PREMIUM
+}
